@@ -46,4 +46,3 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     verifyRequest: "/auth/verify",
   },
 });
-
