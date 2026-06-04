@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { formatDate, formatScore, getPositionSuffix } from "@/lib/utils";
-import { Trophy, Star, Calendar, TrendingUp, ArrowRight, Flame, Medal } from "lucide-react";
+import { formatDate, formatScore } from "@/lib/utils";
+import { Trophy, Star, Calendar, TrendingUp, ArrowRight, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -132,7 +132,7 @@ export function DashboardView({ user, upcomingMatches, recentPredictions, topRan
                       {match.homeTeam.flagUrl ? (
                         <Image src={match.homeTeam.flagUrl} alt={match.homeTeam.name} width={28} height={20} className="rounded object-cover" />
                       ) : (
-                        <span className="text-xl">{match.homeTeam.flag || "🏳️"}</span>
+                        <span className="text-xl">{"⚽"}</span>
                       )}
                       <span className="font-bold text-sm">{match.homeTeam.shortName}</span>
                     </div>
@@ -151,7 +151,7 @@ export function DashboardView({ user, upcomingMatches, recentPredictions, topRan
                       {match.awayTeam.flagUrl ? (
                         <Image src={match.awayTeam.flagUrl} alt={match.awayTeam.name} width={28} height={20} className="rounded object-cover" />
                       ) : (
-                        <span className="text-xl">{match.awayTeam.flag || "🏳️"}</span>
+                        <span className="text-xl">{"⚽"}</span>
                       )}
                     </div>
                   </div>

@@ -11,7 +11,7 @@ import { es } from "date-fns/locale";
 import { upsertPrediction } from "@/actions/predictions";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Lock, CheckCircle, Save, Loader2, Star, Trophy } from "lucide-react";
+import { Lock, CheckCircle, Save, Loader2, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Match, Team, Prediction, TournamentStage } from "@prisma/client";
 
@@ -161,7 +161,7 @@ function MatchCard({ match, userId }: { match: MatchWithData; userId: string }) 
               <p className="text-xs text-muted-foreground">{match.homeTeam.group ? `Grupo ${match.homeTeam.group}` : ""}</p>
             </div>
             <div className="w-12 h-12 rounded-xl bg-white/8 flex items-center justify-center text-3xl flex-shrink-0">
-              {match.homeTeam.flag || "🏳️"}
+              {"⚽"}
             </div>
           </div>
 
@@ -185,7 +185,7 @@ function MatchCard({ match, userId }: { match: MatchWithData; userId: string }) 
           {/* Equipo visitante */}
           <div className="flex-1 flex items-center gap-3">
             <div className="w-12 h-12 rounded-xl bg-white/8 flex items-center justify-center text-3xl flex-shrink-0">
-              {match.awayTeam.flag || "🏳️"}
+              {"⚽"}
             </div>
             <div className="hidden sm:block">
               <p className="font-black text-white text-base">{match.awayTeam.name}</p>

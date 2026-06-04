@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Star, TrendingUp, Medal } from "lucide-react";
+import { Trophy, Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import type { User, Team } from "@prisma/client";
 
@@ -23,7 +23,6 @@ export function RankingView({ users, currentUserId, currentUser }: RankingViewPr
   const currentUserRank = users.findIndex((u) => u.id === currentUserId) + 1;
   const maxPoints = users[0]?.totalPoints || 1;
   const top3 = users.slice(0, 3);
-  const rest = users.slice(3);
 
   return (
     <div className="space-y-8 max-w-4xl mx-auto">
